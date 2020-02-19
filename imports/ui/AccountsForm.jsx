@@ -10,7 +10,7 @@ export default class AccountsForm extends Component {
       password: event.target.password.value,
       name: event.target.name.value
     };
-
+    let name = event.target.name.value;
     Accounts.createUser(data, function(error) {
       if (Meteor.user()) {
         let userID = Meteor.userId();
